@@ -1,0 +1,127 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+button, label {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background: #ec886f;
+    border: 1px solid #030303;
+    border-bottom: 0;
+    opacity: 0.9;
+    color: #FFFFE0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.container__control {
+    display: flex;
+}
+
+.container__control-block {
+    margin-left: 5px;
+}
+
+.container__control-button {
+    cursor: pointer;
+    height: 30px;
+    border: 1px solid #030303;
+    border-radius: 5px;
+}
+
+.container__control-button:hover {
+    opacity: 0.5;
+}
+
+.container__control-button:active {
+    box-shadow: #000000 inset 0 0 10px;
+}
+
+.container__status-text {
+    text-shadow: #030303 1px 1px;
+}
+
+.container__maze {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #e7dc9c;
+    border: 1px solid #000000;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.container__maze-settings {
+    display: none;
+    line-height: 30px;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 5px;
+    background: rgb(238, 248, 146);
+    padding: 5px;
+    color: #000000;
+}
+
+.container__maze-settings:before {
+    content: ''; 
+    position: absolute;
+    left: 8px;
+    top: -15px;
+    border: 8px solid transparent;
+    border-bottom: 8px solid rgb(238, 248, 146);
+}
+
+.container__maze-saveButton {
+    padding: 5px 0;
+    text-align: center;
+}
+
+.window-gameover {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+    border: 1px solid #030303;
+    border-radius: 5px;
+    background: rgba(192, 248, 146);
+    box-shadow: #000000 5px 5px 5px 1px;
+    text-align: center;
+    width: 200px;
+}
+
+.container__control-block {
+    position: relative;
+}
+
+.window-help:before {
+    content: ''; 
+    position: absolute;
+    left: 8px;
+    top: -15px;
+    border: 8px solid transparent;
+    border-bottom: 8px solid rgb(238, 248, 146);
+}
+
+.window-help {
+    display: none;
+    position: absolute;
+    color: #000000;
+    border-radius: 5px;
+    padding: 10px;
+    background: rgb(238, 248, 146);
+    width: 200px;
+}

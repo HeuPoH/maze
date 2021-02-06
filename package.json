@@ -1,0 +1,14 @@
+{
+  "name": "maze",
+  "version": "1.0.0",
+  "description": "Лабиринт",
+  "main": "main.js",
+
+  "keywords": [
+    "лабиринт",
+    "алгоритм Олдоса-Бродера",
+    "игра"
+  ],
+  "author": "Князев В",
+  "license": "ISC"
+}

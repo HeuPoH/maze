@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+    <link rel="shortcut icon" href="/src/style/favicon.ico">
+    <title>Лабиринт</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="container__nav">
+            <div class="container__control">
+                <div class="container__control-block"><img class="container__control-button" id="generateMazeButton" src="./src/style/generate.ico" title="Генерировать"></div>
+                <div class="container__control-block"><img class="container__control-button" id="startGameButton" src="./src/style/play.ico" title="Начать игру"></div>
+                <div class="container__control-block">
+                    <img class="container__control-button" id="settingsGameButton" src="./src/style/settings.ico" title="Настройки">
+                    <div class="container__maze-settings" id="settingsMaze">
+                        <span class="container__maze-text">Уровень сложности:</span>
+                        <div><input type="radio" name="typeLevel" id="easy" checked><label class="container__maze-text" for="easy"> Легкий</label></div>
+                        <div><input type="radio" name="typeLevel" id="medium"><label class="container__maze-text" for="medium"> Средний</label></div>
+                        <div><input type="radio" name="typeLevel" id="hard"><label class="container__maze-text" for="hard"> Тяжелый</label></div>
+                        <span class="container__maze-text">Количество игроков:</span>
+                        <div><input type="radio" name="countPlayers" id="onePlayer" checked><label class="container__maze-text" for="onePlayer"> Один</label></div>
+                        <div><input type="radio" name="countPlayers" id="twoPlayer"><label class="container__maze-text" for="twoPlayer"> Два</label></div>
+                        <div class="container__maze-saveButton"><button type="submit" class="container__control-button" id="saveSettings">Применить</button></div>
+                    </div>
+                </div>
+                <div class="container__control-block">
+                    <img class="container__control-button" id="helpGameButton" src="./src/style/help.ico" title="Помощь">
+                    <div class="window-help" id="windowHelp">
+                        <div class="container__help-text">Для победы необходимо дойти до правого нижнего угла.</div>
+                        <div class="container__help-text">Управление первого игрока: <i>←, →, ↑, ↓</i>.</div>
+                        <div class="container__help-text">Управление второго игрока: <i>w,d,s,a</i>.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__status">
+                <span class="container__status-text">Статус: </span>
+                <span class="container__status-text" id="currentStatus">Ожидание</span>
+                <span class="container__status-text" id="statusProcent"></span>
+            </div>
+        </nav>
+
+        <div class="container__maze">
+            <div class="window-gameover" id="windowGameover"></div>
+            <canvas id="canvas" width="500px" height="500px"></canvas>
+        </div>
+    </div>
+    <script src="src/js/main.js" type="module"></script>
+</body>
+</html>
